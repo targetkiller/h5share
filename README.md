@@ -21,11 +21,12 @@
 ```
 
 2.构造方法传参：
+
 ```javascript
 //返回hs对象，可用于链式调用其他方法。
 var config = {
   //基础信息
-  title':title,//必填,用于分享的标题
+  'title':title,//必填,用于分享的标题
   'desc':desc,//必填,用于分享的描述
   'url':url,//必填,用于分享的链接
   'img':img,//必填,用于分享的缩略图,建议250x250
@@ -48,7 +49,9 @@ var hs = h5share(config);
 ```
 
 3.其他方法
-hs.update(config);  //更新配置信息
+
+`hs.update(config);`  //更新配置信息
+
 ```javascript
 hs.update({
   'title':title,//选填，修改后的分享的标题
@@ -58,7 +61,8 @@ hs.update({
 });
 ```
 
-hs.showShareMenu(callback);  //弹出分享窗口（只有空间、手Q支持）
+`hs.showShareMenu(callback);`  //弹出分享窗口（只有空间、手Q支持）
+
 ```javascript
 //回调函数,可选						
 hs.showShareMenu(function(state){
@@ -68,7 +72,8 @@ hs.showShareMenu(function(state){
 });
 ```
 
-hs.getTerm();  //获取当前平台终端
+`hs.getTerm();`  //获取当前平台终端
+
 ```javascript
 //获取匹配的终端类型
 var result = hs.getTerm();
@@ -83,6 +88,7 @@ var result = hs.getTerm();
 ```
 
 4.CMD规范
+
 引入了CMD规范支持，可直接用SeaJs或CommonJS等实现模块化。
 
 ```html
